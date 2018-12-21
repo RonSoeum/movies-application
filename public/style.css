@@ -153,7 +153,7 @@ p {
 }
 @font-face {
     font-family: 'Broadway 3D';
-    src: url('Broadway3D-Regular.ttf') format('truetype');
+    src: url('../Exported Fonts/Broadway 3D/broadway.3d-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
