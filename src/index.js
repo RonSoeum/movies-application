@@ -1,34 +1,21 @@
+"use strict";
+
 const $ = require ("jQuery");
+const {getMovies, catchError, fMovies, index} = require('./api.js');
 
-/**
- * es6 modules and imports
- */
+$(document).ready(function() {
 
-import sayHello from './hello';
-sayHello('World');
+    getMovies().then((movies) => {
+      console.log('Here are all the movies:');
+      movies.forEach(({title, rating, id}) => {
+        console.log(`id#${id} - ${title} - rating: ${rating}`);
+      });
+    }).catch(catchError);
 
-/**
- * require style imports
- */
-const {getMovies} = require('./api.js');
+    // Render Featured Movies
+    getMovies().then(fMovies).catch(catchError);
 
-getMovies().then((movies) => {
-  console.log('Here are all the movies:');
-  movies.forEach(({title, rating, id}) => {
-    console.log(`id#${id} - ${title} - rating: ${rating}`);
-  });
-}).catch((error) => {
-  alert('Oh no! Something went wrong.\nCheck the console for details.');
-  console.log(error);
-});
+    // Render Movie Index
+    getMovies().then(index).catch(catchError);
 
-const movies = getMovies().then((movies) => {
-    console.log('Here are all the movies:');
-    movies.forEach(({title, rating, id}) => {
-        return `id#${id} - ${title} - rating: ${rating}`;
-    });
-}).catch((error) => {
-    alert('Oh no! Something went wrong.\nCheck the console for details.')
-    console.log(error);
-});
-
+});// Ready
