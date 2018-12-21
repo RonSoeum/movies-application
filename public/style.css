@@ -1,27 +1,42 @@
 @import url(//fonts.googleapis.com/css?family=Vibur);
 
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px #c4a300; }
+    40% { box-shadow: 0 0 20px #c4a300; }
+    60% { box-shadow: 0 0 20px #c4a300; }
+    100% { box-shadow: 0 0 -10px #c4a300; }
+}
+
 .logo {
     text-align: center;
-    width: 65%;
+    width: 80%;
     height: 250px;
     margin: auto;
     position: absolute;
-    top: 0;
+    top: -500px;
     left: 0;
     right: 0;
     bottom: 0;
     background: none;
+
 }
 
 .logo b{
     background: none;
-    font: 100 15vh "Vibur";
-    color: #fee;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+    margin-left: auto;
+    margin-right: auto;
+    font: 200 15vh "Vibur";
+    font-size: 250px;
+    color: lightyellow;
+    text-shadow: 0 -40px 200px, 0 0 2px, 0 0 1em white, 0 0 0.2em lightyellow, 0 0 0.1em white, 0 10px 3px black;
+    -webkit-text-stroke: 3px lightyellow;
+
 }
+
 .logo b span{
-    animation: blink linear infinite 2s;
+    animation: blink linear infinite 5s;
     background: none;
+
 }
 @keyframes blink {
     78% {
@@ -57,33 +72,6 @@
     }
 }
 
-
-/* follow me @nodws */
-#btn-twtr{
-    clear:both;
-    color:#fff;
-    border:2px solid;
-    border-radius:3px;
-    text-align:center;
-    text-decoration:none;
-    display:block;
-    font-family:sans-serif;
-    font-size:14px;
-    width:13em;
-    padding:5px 10px;
-    font-weight:600;
-    position:absolute;
-    bottom:20px;
-    left:0;
-    right:0;
-    margin:0 auto;
-    /*background:rgba(0,0,0,0.2);*/
-    box-shadow:0 0 0px 3px rgba(0,0,0,0.2);
-    opacity:0.4
-}#btn-twtr:hover{color:#fff;opacity:1}
-
-
-
 body, html {
     height: 100%;
     background-image:url("images/background.jpg") ;
@@ -100,7 +88,7 @@ body, html {
 
 /* The hero image */
 .hero-image {
-    height: 60%;
+    height: 100%;
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -135,23 +123,63 @@ body, html {
 .container {
     background: none;
     font-family: 'Carter One', cursive;
+    width: 100%;
+    color: whitesmoke;
+    alignment: center;
 }
 h2 {
     background: none;
-    font-family: 'Bangers', cursive;
-    font-size: 70px;
-    -webkit-text-stroke: 5px black;
+    font-family: 'Broadway 3D';
+    font-size: 100px;
 }
 h1 {
     background: none;
-    font-family: 'Monoton', cursive;
+    /*font-family: 'Monoton', cursive;*/
     font-size: 100px;
 
 }
 p {
     background: none;
-    font-family: 'Carter One', cursive;
+    /*font-family: 'Carter One', cursive;*/
     font-size: 30px;
 
 }
+#userPreferred {
+    width: 100%;
+    font-size: 40px;
+    display: inline-block;
+    color: whitesmoke;
 
+}
+@font-face {
+    font-family: 'Broadway 3D';
+    src: url('Broadway3D-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+#title, #genre, #rating, #addButton{
+    color: whitesmoke;
+}
+#movies {
+    opacity: 0.7%;
+    margin-right: auto;
+    margin-left: auto;
+    align-content: center;
+}
+
+
+.button-glow {
+    animation: glowing 5000ms infinite;
+}
+#featuredMovies{
+    margin-top: 50px;
+}
+#mIndex{
+    margin-top: 50px;
+}
+.logo {
+    margin-top: auto;
+}
+#mWish {
+    margin-top: 50px;
+}
