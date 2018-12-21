@@ -10,9 +10,12 @@
 </head>
 <body>
 
+
+
 <!--/*****************************************FEATURED MOVIES*********************************************/-->
 
-<div id="featuredMovies">
+<div class="text-center" id="featuredMovies">
+    <h2 class="text-center">Featured Movies</h2>
     <div class="fMovie1" style="width: 18rem;">
         <img class="card-img-top" alt="Card image cap">
         <div class="card-body">
@@ -43,12 +46,18 @@
     </div>
 </div>
 
-<!--Movie Index-->
+<!--*******************************-Movie Index-********************************************-->
+
 <div class="container">
     <h2 class="text-center">Movie Index</h2>
     <div id="movies" class="row"></div>
 </div>
-
+<form id="userPreferred" class="text-center">
+<input  type="text" id="title" placeholder="Movie Title">
+<input type="text" id="genre" placeholder="Movie Genre">
+<input type="text" id="rating" placeholder="Movie Rating">
+    <input type="submit" value="Add Your Movie!">
+</form>
 <script src="main.js"></script>
 </body>
 </html>
