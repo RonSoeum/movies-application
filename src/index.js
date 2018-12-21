@@ -1,7 +1,7 @@
 "use strict";
 
 const $ = require ("jQuery");
-const {getMovies, catchError, fMovies, index} = require('./api.js');
+const {getMovies, err, fMovies, index} = require('./api.js');
 
 $(document).ready(function() {
 
@@ -10,12 +10,12 @@ $(document).ready(function() {
       movies.forEach(({title, rating, id}) => {
         console.log(`id#${id} - ${title} - rating: ${rating}`);
       });
-    }).catch(catchError);
+    }).catch(err);
 
     // Render Featured Movies
-    getMovies().then(fMovies).catch(catchError);
+    getMovies().then(fMovies).catch(err);
 
     // Render Movie Index
-    getMovies().then(index).catch(catchError);
+    getMovies().then(index).catch(err);
 
 });// Ready
