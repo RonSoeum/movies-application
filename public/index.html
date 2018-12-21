@@ -6,53 +6,101 @@
 
     <title>Movies R' Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Carter+One|Monoton" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<!--/*****************************************HERO IMAGE*********************************************/-->
 
+<div class="hero-image">
+    <div class="logo"><b>M<span>ov</span>ie<span>s</span>R'<span>US</span></b></div>
+</div>
+
+<!--/*****************************************FEATURED GENRES*********************************************/-->
+
+<div class="text-center" id="featuredMovies">
+    <h2 class="text-center">Featured Genres</h2>
+    <div class="fGenre1" style="width: 18rem;">
+        <img class="card-img-top" src="images/drama.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h3 id="title-fGenre1">Drama</h3>
+        </div>
+    </div>
+    <div class="fGenre2" style="width: 18rem;">
+        <img class="card-img-top" src="images/action.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h3 id="title-fGenre2">Action</h3>
+        </div>
+    </div>
+    <div class="fGenre3" style="width: 18rem;">
+        <img class="card-img-top" src="images/rom-com.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h3 id="title-fGenre3">Rom-Com</h3>
+        </div>
+    </div>
+    <div class="fGenre4" style="width: 18rem;">
+        <img class="card-img-top" src="images/comedy.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h3 id="title-fGenre4">Comedy</h3>
+        </div>
+    </div>
+</div>
 
 <!--/*****************************************FEATURED MOVIES*********************************************/-->
 
 <div class="text-center" id="featuredMovies">
     <h2 class="text-center">Featured Movies</h2>
     <div class="fMovie1" style="width: 18rem;">
-        <img class="card-img-top" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top" src="images/batman.jpg" alt="Card image cap">
+        <!--<div class="card-body">-->
             <h3 id="title-fMovie1"></h3>
-            <p id="rating-fMovie1">p element</p>
+            <p id="rating-fMovie1"></p>
         </div>
-    </div>
+    <!--</div>-->
     <div class="fMovie2" style="width: 18rem;">
-        <img class="card-img-top" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top" src="images/night-school.png" alt="Card image cap">
+        <!--<div class="card-body">-->
             <h3 id="title-fMovie2"></h3>
-            <p id="rating-fMovie2">p element</p>
+            <p id="rating-fMovie2"></p>
         </div>
-    </div>
+    <!--</div>-->
     <div class="fMovie3" style="width: 18rem;">
-        <img class="card-img-top" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top" src="images/wolfonw.jpg" alt="Card image cap">
+        <!--<div class="card-body">-->
             <h3 id="title-fMovie3"></h3>
-            <p id="rating-fMovie3">p element</p>
+            <p id="rating-fMovie3"></p>
         </div>
-    </div>
+    <!--</div>-->
     <div class="fMovie4" style="width: 18rem;">
-        <img class="card-img-top" alt="Card image cap">
-        <div class="card-body">
+        <img class="card-img-top" src="images/mad-max.jpg" alt="Card image cap">
+        <!--<div class="card-body">-->
             <h3 id="title-fMovie4"></h3>
-            <p id="rating-fMovie4">p element</p>
+            <p id="rating-fMovie4"></p>
         </div>
-    </div>
+    <!--</div>-->
 </div>
 
 <!--*******************************-Movie Index-********************************************-->
 
 <div class="container">
-    <h2 class="text-center">Movie Index</h2>
+    <h2 id="movieIndex" class="text-center">Movie Index</h2>
     <div id="movies" class="row"></div>
+    <div class="text-center">
     <img id="loading" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="loading data">
-</div>
+    </div>
+    </div>
+
+<!--*******************************-WISHLIST-********************************************-->
+
+<div class="container text-center">
+    <h2 class="text-center">WISHLIST</h2>
+    <p>Can't Find Your Favorite? Add it here!</p>
+    <div id="wMovies" class="row"></div>
+    <div class="text-center">
+    </div>
+
+
 <form id="userPreferred" class="text-center">
 <input  type="text" id="title" placeholder="Movie Title">
 <input type="text" id="genre" placeholder="Movie Genre">

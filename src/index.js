@@ -1,7 +1,7 @@
 "use strict";
 
 const $ = require ("jQuery");
-const {getMovies, err, fMovies, index} = require('./api.js');
+const {getMovies, err, index} = require('./api.js');
 
 $(document).ready(function() {
 
@@ -12,8 +12,8 @@ $(document).ready(function() {
       });
     }).catch(err);
 
-    // Render Featured Movies
-    getMovies().then(fMovies).catch(err);
+    // // Render Featured Movies
+    // getMovies().then(fMovies).catch(err);
 
     // Render Movie Index
     getMovies().then(index).catch(err);

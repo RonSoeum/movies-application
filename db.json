@@ -1,22 +1,22 @@
 {
   "movies": [
     {
-      "title": "True Grit",
+      "title": "Batman",
       "rating": "4",
       "id": 1
     },
     {
-      "title": "Star Wars: A New Hope",
+      "title": "Night School",
       "rating": "5",
       "id": 2
     },
     {
-      "title": "Patriot",
+      "title": "Wolf on Wallstreet",
       "rating": "5",
       "id": 3
     },
     {
-      "title": "Get Hard",
+      "title": "Mad Max",
       "rating": "4",
       "id": 4
     },
@@ -159,11 +159,6 @@
       "title": "Where The Red Fern Grows",
       "rating": "5",
       "id": 32
-    },
-    {
-      "title": "dfgdg",
-      "rating": "3",
-      "id": 33
     }
   ]
 }

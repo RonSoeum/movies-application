@@ -13,16 +13,16 @@ const err = (error) => {
 };
 
 // Featured Movies
-const fMovies = movies => {
-  $('#title-fMovie1').text(movies[0].title);
-  $('#title-fMovie2').text(movies[1].title);
-  $('#title-fMovie3').text(movies[2].title);
-  $('#title-fMovie4').text(movies[3].title);
-  $('#rating-fMovie1').text(movies[0].rating);
-  $('#rating-fMovie2').text(movies[1].rating);
-  $('#rating-fMovie3').text(movies[2].rating);
-  $('#rating-fMovie4').text(movies[3].rating);
-};
+// const fMovies = movies => {
+//   $('#title-fMovie1').text(movies[0].title);
+//   $('#title-fMovie2').text(movies[1].title);
+//   $('#title-fMovie3').text(movies[2].title);
+//   $('#title-fMovie4').text(movies[3].title);
+//   $('#rating-fMovie1').text(movies[0].rating);
+//   $('#rating-fMovie2').text(movies[1].rating);
+//   $('#rating-fMovie3').text(movies[2].rating);
+//   $('#rating-fMovie4').text(movies[3].rating);
+// };
 
 // Movie Index
 const index  = (movies) => {
@@ -60,7 +60,7 @@ $('#addButton').click(() => {
 
 module.exports = {
   getMovies,
-  fMovies,
+  // fMovies,
   index,
   err
 };
