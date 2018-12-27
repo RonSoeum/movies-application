@@ -157,7 +157,7 @@ p {
     font-weight: normal;
     font-style: normal;
 }
-#title, #genre, #rating, #addButton{
+input, button{
     color: whitesmoke;
 }
 #movies {

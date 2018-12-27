@@ -2,163 +2,201 @@
   "movies": [
     {
       "title": "Batman",
+      "genre": "Thriller, Action",
       "rating": "4",
       "id": 1
     },
     {
       "title": "Night School",
+      "genre": "Comedy",
       "rating": "5",
       "id": 2
     },
     {
       "title": "Wolf on Wallstreet",
+      "genre": "Biography, Crime, Drama, Comedy",
       "rating": "5",
       "id": 3
     },
     {
       "title": "Mad Max",
+      "genre": "Action, Adventure, Sci-Fi, Thriller",
       "rating": "4",
       "id": 4
     },
     {
       "title": "Anchorman",
+      "genre": "Comedy",
       "rating": "5",
       "id": 5
     },
     {
       "title": "Talladega Nights: The Ballad of Ricky Bobby.",
+      "genre": "Comedy, Sport",
       "rating": "5",
       "id": 6
     },
     {
       "title": "Never Back Down",
+      "genre": "Action, Drama",
       "rating": "3",
       "id": 7
     },
     {
       "title": "Fight Club",
+      "genre": "Drama",
       "rating": "5",
       "id": 8
     },
     {
       "title": "Planes, Trains and Automobiles",
+      "genre": "Comedy, Drama",
       "rating": "5",
       "id": 9
     },
     {
       "title": "Day After Tomorrow",
+      "genre": "Action, Adventure, Sci-Fi, Thriller",
       "rating": "4",
       "id": 10
     },
     {
       "title": "Transformers",
+      "genre": "Action, Adventure, Sci-Fi",
       "rating": "4",
       "id": 11
     },
     {
       "title": "Venom",
+      "genre": "Action, Adventure, Suspense",
       "rating": "5",
       "id": 12
     },
     {
       "title": "13 Hours",
+      "genre": "Action, Drama, History, Thriller, War",
       "rating": "5",
       "id": 13
     },
     {
       "title": "Lone Survivor",
+      "genre": "Action, Drama, Biography, Thriller, War",
       "rating": "4",
       "id": 14
     },
     {
       "title": "American Sniper",
+      "genre": "Action, Drama, Biography, Thriller, War",
       "rating": "5",
       "id": 15
     },
     {
       "title": "Black Hawk Down",
+      "genre": "Action, Drama, History, Thriller, War",
       "rating": "5",
       "id": 16
     },
     {
       "title": "AIRPLANE II",
+      "genre": "Sci-Fi, Disaster Film",
       "rating": "2",
       "id": 17
     },
     {
       "title": "AIRPLANE",
+      "genre": "Parody Film, Disaster Film",
       "rating": "5",
       "id": 18
     },
     {
       "title": "Lion King",
-      "rating": "1",
+      "genre": "Animation, Adventure, Drama",
+      "rating": "4",
       "id": 19
     },
     {
       "title": "Airforce One",
-      "rating": "5",
+      "genre": "Action, Drama, Thriller",
+      "rating": "3",
       "id": 20
     },
     {
       "title": "Pearl Harbor",
-      "rating": "4",
+      "genre": "Action, Drama, History",
+      "rating": "3",
       "id": 21
     },
     {
       "title": "Top Gun",
-      "rating": "5",
+      "genre": "Action, Drama",
+      "rating": "4",
       "id": 22
     },
     {
       "title": "Friday Night Lights",
+      "genre": "Action, Drama, Sport",
       "rating": "4",
       "id": 23
     },
     {
       "title": "American Pie: The Naked Mile",
-      "rating": "5",
+      "genre": "Comedy",
+      "rating": "3",
       "id": 24
     },
     {
       "title": "Back to the Future",
-      "rating": "5",
+      "genre": "Adventure, Comedy, Sci-Fi",
+      "rating": "4",
       "id": 25
     },
     {
       "title": "Back to the Future II",
+      "genre": "Adventure, Comedy, Sci-Fi",
       "rating": "4",
       "id": 26
     },
     {
       "title": "Back to the Future III",
-      "rating": "4",
+      "genre": "Adventure, Comedy, Sci-Fi",
+      "rating": "3",
       "id": 27
     },
     {
       "title": "Four Christmas's",
-      "rating": "5",
+      "genre": "Comedy, Drama, Romance",
+      "rating": "3",
       "id": 28
     },
     {
       "title": "Straight Outta Compton",
-      "rating": "5",
+      "genre": "Biography, Drama, History",
+      "rating": "4",
       "id": 29
     },
     {
       "title": "Gran Torino",
-      "rating": "3",
+      "genre": "Drama",
+      "rating": "4",
       "id": 30
     },
     {
       "title": "American Gangster",
-      "rating": "3",
+      "genre": "Biography, Crime, Drama",
+      "rating": "4",
       "id": 31
     },
     {
       "title": "Where The Red Fern Grows",
-      "rating": "5",
+      "genre": "Drama, Family",
+      "rating": "3",
       "id": 32
+    },
+    {
+      "title": "robocop",
+      "genre": "action",
+      "rating": "1",
+      "id": 56
     }
   ]
 }

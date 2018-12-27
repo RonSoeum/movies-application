@@ -21,7 +21,7 @@
 
 <!--/*****************************************FEATURED GENRES*********************************************/-->
 
-<div class="text-center" id="featuredMovies">
+<div class="text-center" id="featuredGenres">
     <h2 class="text-center">Featured Genres</h2>
     <div class="fGenre1" style="width: 18rem;">
         <img class="card-img-top" src="images/drama.jpg" alt="Card image cap">
@@ -87,9 +87,15 @@
 
 <div class="container-fluid" id="mIndex">
     <h2 id="movieIndex" class="text-center">Cards Against Movie Index</h2>
+    <form>
+        <input id="resetIndex" type="reset" value="reset index">
+        <input id="search-title" type="search" placeholder="search by title...">
+        <input id="search-genre" type="search" placeholder="search by genre...">
+        <input id="search-rating" type="search" placeholder="search by rating...">
+    </form>
     <div id="movies" class="row"></div>
     <div class="text-center">
-    <img id="loading" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="loading data">
+    <img class="loadingIndex" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="loading data">
     </div>
     </div>
 
@@ -99,16 +105,18 @@
     <h2 class="text-center">WISHLIST</h2>
     <p>Can't Find Your Favorite? Add it here!</p>
     <div id="wMovies" class="row"></div>
-    <div class="text-center">
-    </div>
+    <img class="loadingWish" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="loading data">
+</div>
 
 
 <form id="userPreferred" class="text-center">
 <input  type="text" id="title" placeholder="Movie Title">
 <input type="text" id="genre" placeholder="Movie Genre">
 <input type="text" id="rating" placeholder="Movie Rating">
-    <input id="addButton" type="submit" value="Add Your Movie!">
+    <input id="addButton" type="reset" value="Add Your Movie!">
 </form>
+
+
 <script src="main.js"></script>
 </body>
 </html>
