@@ -39,7 +39,7 @@ const renderWishMovies  = (movies) => {
         stars += `<i class="far fa-star"></i>`;
       }
       $('#wMovies').append(`<div class="card-body col-3 position-relative"><h2>${title}</h2>
-        <button class="delete-button position-absolute btn" data-id="${id}">X</button>
+        <button class="delete-button position-absolute btn btn-secondary btn-sm" data-id="${id}">X</button>
         <p>${genre}</p><p>${stars}</p></div>`);
     }
   })
@@ -50,17 +50,10 @@ const renderWishSelect = () => {
   getMoviesJson().then(movies => {
     movies.map(({title, id}) => {
       if (id > 32) {
-        $('#edit-movie').append(`<option value="${id}">${title}</option>`);
+        $('#edit-movie-select').append(`<option value="${id}">${title}</option>`);
       }
     });
   });
-};
-
-// Reset Wish List Form
-const resetWishListForm = () => {
-  $("#edit-movie > *:not('.not-remove')").remove();
-  renderWishSelect();
-  $("#userPreferred")[0].reset();
 };
 
 // Real Time Search By Movie Title
@@ -144,7 +137,6 @@ export {
   renderIndexMovies,
   renderWishMovies,
   renderWishSelect,
-  resetWishListForm,
   movieIndexByTitle,
   movieIndexByGenre,
   movieIndexByRating,

@@ -7,7 +7,6 @@ import {
     renderIndexMovies,
     renderWishMovies,
     renderWishSelect,
-    resetWishListForm,
     movieIndexByTitle,
     movieIndexByGenre,
     movieIndexByRating,
@@ -43,54 +42,59 @@ $(document).ready(() => {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                title: $('#title').val(),
-                genre: $('#genre').val(),
-                rating: $('#rating option:selected').val()
+                title: $('#add-title').val(),
+                genre: $('#add-genre').val(),
+                rating: $('#add-rating option:selected').val()
             })
         })
             .then(() => {
                 getMoviesJson().then(renderWishMovies)
                     .then(() => $('#add-button').prop("disabled", false)).catch(err);
-                resetWishListForm();
+                $("#add-movie")[0].reset();
+                $("#edit-movie-select > *:not('.not-remove')").remove();
+                renderWishSelect();
             }).catch(err);
     });
 
     // Put Request - Edit Movie In Wish List
     $('#edit-button').click(() => {
         $('#edit-button').prop("disabled", true);
-        if($('#edit-movie option:selected').val() == 'default'){
+        if($('#edit-movie-select option:selected').val() == 'default'){
             $('#edit-button').prop("disabled", false);
         }else{
             $('#wMovies').empty();
             $('.loadingWish').show();
-            let id = $('#edit-movie option:selected').val();
+            let id = $('#edit-movie-select option:selected').val();
             fetch(`/api/movies/${id}`, {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
-                    title: $('#title').val(),
-                    genre: $('#genre').val(),
-                    rating: $('#rating option:selected').val()
+                    title: $('#edit-title').val(),
+                    genre: $('#edit-genre').val(),
+                    rating: $('#edit-rating option:selected').val()
                 })
             })
                 .then(() => {
                     getMoviesJson().then(renderWishMovies)
                         .then(() => $('#edit-button').prop("disabled", false)).catch(err);
-                    resetWishListForm();
+                    $("#edit-movie")[0].reset();
+                    $("#edit-movie-select > *:not('.not-remove')").remove();
+                    renderWishSelect();
                 }).catch(err);
         }
     });
 
     // Delete Request - Delete Movie From Wish List
     $('#wMovies').on('click', ".delete-button", (e) => {
-        $('#wMovies').empty();
-        $('.loadingWish').show();
         let id = $(e.target).data('id');
         if(confirm("Do you want to delete this from the list?")){
+            $('#wMovies').empty();
+            $('.loadingWish').show();
             fetch(`/api/movies/${id}`, {method: 'DELETE'})
                 .then(() => {
                     getMoviesJson().then(renderWishMovies).catch(err);
-                    resetWishListForm();
+                    $("#edit-movie-select > *:not('.not-remove')").remove();
+                    renderWishSelect();
                 }).catch(err);
         }
     });

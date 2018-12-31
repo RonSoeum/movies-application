@@ -88,7 +88,7 @@
 
 <div class="container-fluid text-center" id="mIndex">
     <h2 id="movieIndex" class="broadway">Cards Against Movie Index</h2>
-    <form id="search-form" class="mb-1">
+    <form id="search-form" class="mb-2">
         <input id="search-title" type="search" placeholder="search by title...">
         <input id="search-genre" type="search" placeholder="search by genre...">
         <select name="search-rating" id="search-rating">
@@ -112,31 +112,113 @@
 <div class="container-fluid text-center" id="mWish">
     <h2 class="broadway">WISHLIST</h2>
     <p>Can't Find Your Favorite? Add it here!</p>
+
+    <div class="mb-2">
+        <!-- Button Trigger Add Movie Modal -->
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#wishListModal">
+            Add Movie
+        </button>
+        <!-- Button Trigger Edit Movie Modal -->
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editMovieModal">
+            Edit Movie
+        </button>
+    </div>
+
+    <!-- Add Movie Modal -->
+    <div class="modal fade" id="wishListModal" tabindex="-1" role="dialog" aria-labelledby="wishListModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add Movie</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="add-movie" class="wishListForm text-left">
+                        <div>
+                            <label for="add-title">New Title:</label>
+                            <input  type="text" id="add-title">
+                        </div>
+                        <div>
+                            <label for="add-title">New Genre:</label>
+                            <input type="text" id="add-genre">
+                        </div>
+                        <div>
+                            <label for="add-title">New Rating:</label>
+                            <select name="rating" id="add-rating">
+                                <option selected>--rating--</option>
+                                <option value="1">1 Star</option>
+                                <option value="2">2 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="5">5 Stars</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="button" id="add-button" class="btn btn-secondary" value="Save Changes">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Movie Modal -->
+    <div class="modal fade" id="editMovieModal" tabindex="-1" role="dialog" aria-labelledby="editMovieModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Movie</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-movie" class="wishListForm text-left">
+                        <div>
+                            <label for="edit-movie-select">Edit Movie:</label>
+                            <select name="edit-movie-select" id="edit-movie-select">
+                                <option class="not-remove" value="default" selected>--select a movie to edit--</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="edit-title">New Title:</label>
+                            <input type="text" name="edit-title" id="edit-title">
+                        </div>
+                        <div>
+                            <label for="edit-genre">New Genre:</label>
+                            <input type="text" name="edit-genre" id="edit-genre">
+                        </div>
+                        <div>
+                            <label for="edit-rating">New Rating:</label>
+                            <select name="edit-rating" id="edit-rating">
+                                <option selected>--rating--</option>
+                                <option value="1">1 Star</option>
+                                <option value="2">2 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="5">5 Stars</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Close">
+                    <input type="button" id="edit-button" class="btn btn-secondary" value="Save Changes">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Render Wish List-->
     <div id="wMovies" class="row"></div>
+    <!--Loading Gif-->
     <img class="loadingWish" src="https://media.giphy.com/media/sSgvbe1m3n93G/giphy.gif" alt="loading data">
 </div>
 
 
-<form id="userPreferred" class="text-center mt-1 mb-5">
-    <input  type="text" id="title" placeholder="title...">
-    <input type="text" id="genre" placeholder="genre...">
-    <select name="rating" id="rating">
-        <option selected>--rating--</option>
-        <option value="1">1 Star</option>
-        <option value="2">2 Stars</option>
-        <option value="3">3 Stars</option>
-        <option value="4">4 Stars</option>
-        <option value="5">5 Stars</option>
-    </select>
-    <input id="add-button" type="reset" value="add movie">
-    <h3 class="mt-3">OR:</h3>
-    <select name="edit-movie" id="edit-movie">
-        <option class="not-remove" value="default" selected>--select a movie to edit--</option>
-    </select>
-    <input id="edit-button" type="reset" value="edit movie">
-</form>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+
 </body>
-</html>npm
+</html>
