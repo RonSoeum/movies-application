@@ -127,7 +127,7 @@ body, html {
     color: whitesmoke;
     alignment: center;
 }
-h2 {
+.broadway {
     background: none;
     font-family: 'Broadway 3D';
     font-size: 100px;
@@ -144,20 +144,20 @@ p {
     font-size: 30px;
 
 }
-#userPreferred {
+#userPreferred, #search-form {
     width: 100%;
-    font-size: 40px;
+    font-size: 25px;
     display: inline-block;
     color: whitesmoke;
 
 }
 @font-face {
     font-family: 'Broadway 3D';
-    src: url('../Exported Fonts/Broadway 3D/broadway.3d-regular.ttf') format('truetype');
+    src: url('../exported-fonts/broadway-3d/broadway.3d-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-input, button{
+input, button, select{
     color: whitesmoke;
 }
 #movies {
@@ -166,15 +166,13 @@ input, button{
     margin-left: auto;
     align-content: center;
 }
-
-
 .button-glow {
     animation: glowing 5000ms infinite;
 }
-#featuredMovies{
+#featuredMovies {
     margin-top: 50px;
 }
-#mIndex{
+#mIndex {
     margin-top: 50px;
 }
 .logo {
@@ -182,4 +180,8 @@ input, button{
 }
 #mWish {
     margin-top: 50px;
+}
+.position-absolute {
+    top: 0;
+    right: 0;
 }

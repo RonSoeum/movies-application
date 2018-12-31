@@ -6,10 +6,10 @@ import {
     getMoviesJson,
     renderIndexMovies,
     renderWishMovies,
+    renderWishSelect,
     movieIndexByTitle,
     movieIndexByGenre,
     movieIndexByRating,
-    deleteMovies,
     err} from './api.js';
 
 $(document).ready(function() {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     // Render Wish Movies
     getMoviesJson().then(renderWishMovies).catch(err);
 
-    // Delete Wish Movies
-    deleteMovies();
+    // Render Wish Select Options
+    renderWishSelect();
 
 });// Ready
