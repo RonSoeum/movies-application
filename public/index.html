@@ -15,7 +15,7 @@
 <!--/*****************************************HERO IMAGE*********************************************/-->
 
 <div class="hero-image">
-    <div class="logo"><b id="glow">C<span>ha</span>s<span>e&</span>Ro<span>n's<span><br><span>M<span>ov<span>i<span>es</span></b>
+    <div class="logo"><b id="glow">C<span>ha</span>s<span>e&</span>Ro<span>n's</span><br>M<span>ov</span>ie<span>s</span></b>
     </div>
 </div>
 
@@ -91,9 +91,8 @@
     <form id="search-form" class="mb-1">
         <input id="search-title" type="search" placeholder="search by title...">
         <input id="search-genre" type="search" placeholder="search by genre...">
-        <!--<input id="search-rating" type="search" placeholder="search by rating...">-->
         <select name="search-rating" id="search-rating">
-            <option class="not-remove">--search by rating--</option>
+            <option selected>--search by rating--</option>
             <option value="1">1 Star</option>
             <option value="2">2 Stars</option>
             <option value="3">3 Stars</option>
@@ -121,11 +120,18 @@
 <form id="userPreferred" class="text-center mt-1 mb-5">
     <input  type="text" id="title" placeholder="title...">
     <input type="text" id="genre" placeholder="genre...">
-    <input type="number" id="rating" placeholder="rating...">
+    <select name="rating" id="rating">
+        <option selected>--rating--</option>
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+    </select>
     <input id="add-button" type="reset" value="add movie">
     <h3 class="mt-3">OR:</h3>
     <select name="edit-movie" id="edit-movie">
-        <option class="not-remove">--select a movie to edit--</option>
+        <option class="not-remove" value="default" selected>--select a movie to edit--</option>
     </select>
     <input id="edit-button" type="reset" value="edit movie">
 </form>
@@ -133,4 +139,4 @@
 
 <script src="main.js"></script>
 </body>
-</html>
+</html>npm
