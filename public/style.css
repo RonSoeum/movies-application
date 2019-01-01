@@ -81,7 +81,7 @@ body, html {
     color: whitesmoke;
 }
 
-* {
+.linear-gradient {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
 
 }
@@ -119,11 +119,12 @@ body, html {
     display: inline-block;
     padding: 5px;
     font-family: 'Carter One', cursive;
+    background-color: black;
 }
 .container {
     background: none;
     font-family: 'Carter One', cursive;
-    width: 100%;
+    max-width: 95%;
     color: whitesmoke;
     alignment: center;
 }
@@ -141,14 +142,7 @@ h1 {
 p {
     background: none;
     /*font-family: 'Carter One', cursive;*/
-    font-size: 30px;
-
-}
-.wishListForm, #search-form {
-    width: 100%;
-    font-size: 25px;
-    display: inline-block;
-    color: whitesmoke;
+    font-size: 20px;
 
 }
 @font-face {
@@ -156,9 +150,6 @@ p {
     src: url('../exported-fonts/broadway-3d/broadway.3d-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-input, button, select{
-    color: whitesmoke;
 }
 #movies {
     opacity: 0.7%;
@@ -180,9 +171,9 @@ input, button, select{
 }
 #mWish {
     margin-top: 3em;
-    margin-bottom: 3em;
+    padding-bottom: 3em;
 }
 .position-absolute {
-    top: 0;
-    right: 0;
+    bottom: 1em;
+    right: 1em;
 }

@@ -23,8 +23,8 @@ const renderIndexMovies  = (movies) => {
       for (; rating >= 1; rating--){
         stars += `<i class="far fa-star"></i>`;
       }
-      $('#movies').append(`<div class="card-body col-3"><div class="">
-        <h2>${title}</h2><p>${genre}</p><h2>${stars}</h2></div></div>`);
+      $('#movies').append(`<div class="card-body col-3 border">
+        <h2>${title}</h2><p>${genre}</p><h2>${stars}</h2></div>`);
     }
   })
 };
@@ -38,8 +38,8 @@ const renderWishMovies  = (movies) => {
       for (; rating >= 1; rating--){
         stars += `<i class="far fa-star"></i>`;
       }
-      $('#wMovies').append(`<div class="card-body col-3 position-relative"><h2>${title}</h2>
-        <button class="delete-button position-absolute btn btn-secondary btn-sm" data-id="${id}">X</button>
+      $('#wMovies').append(`<div class="card-body col-3 position-relative border"><h2>${title}</h2>
+        <button class="delete-button position-absolute btn btn-white btn-sm" data-id="${id}">X</button>
         <p>${genre}</p><p>${stars}</p></div>`);
     }
   })
@@ -70,7 +70,7 @@ const movieIndexByTitle = () => {
               stars += `<i class="far fa-star"></i>`;
             }
             if(movie.title.toLowerCase().indexOf(word.toLowerCase()) != -1){
-              $('#movies').append(`<div class="card-body col-3">
+              $('#movies').append(`<div class="card-body col-3 border">
                 <h2>${title}</h2><p>${genre}</p><p>${stars}</p></div>`);
             }
           }
@@ -94,7 +94,7 @@ const movieIndexByGenre = () => {
               stars += `<i class="far fa-star"></i>`;
             }
             if(movie.genre.toLowerCase().indexOf(word.toLowerCase()) != -1){
-              $('#movies').append(`<div class="card-body col-3"><h2>${title}</h2>
+              $('#movies').append(`<div class="card-body col-3 border"><h2>${title}</h2>
                 <p>${genre}</p><p>${stars}</p></div>`);
             }
           }
@@ -109,7 +109,7 @@ const movieIndexByRating = () => {
   $('#search-rating').on('input', () => {
     getMoviesJson().then(movies => {
       $('#movies').empty();
-      if($('#search-rating option:selected').val() === `--search by rating--`){
+      if($('#search-rating option:selected').val() === `search by rating...`){
         getMoviesJson().then(renderIndexMovies).catch(err);
       }else{
         movies.map(movie => {
@@ -121,7 +121,7 @@ const movieIndexByRating = () => {
                 stars += `<i class="far fa-star"></i>`;
               }
               if(movie.rating.indexOf(word) != -1){
-                $('#movies').append(`<div class="card-body col-3"><h2>${title}</h2>
+                $('#movies').append(`<div class="card-body col-3 border"><h2>${title}</h2>
                   <p>${genre}</p><p>${stars}</p></div>`);
               }
             }
