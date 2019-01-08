@@ -193,12 +193,6 @@
       "id": 32
     },
     {
-      "title": "Disaster Movie",
-      "genre": "Disaster",
-      "rating": "1",
-      "id": 33
-    },
-    {
       "title": "City of God",
       "genre": "Drama, Crime",
       "rating": "5",
@@ -215,6 +209,12 @@
       "genre": "Comedy",
       "rating": "2",
       "id": 36
+    },
+    {
+      "title": "I love Brittany SOOOOOOO MUCH",
+      "genre": "LOVE",
+      "rating": "5",
+      "id": 37
     }
   ]
 }
