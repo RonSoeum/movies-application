@@ -193,12 +193,6 @@
       "id": 32
     },
     {
-      "title": "Disaster Movie",
-      "genre": "Disaster",
-      "rating": "1",
-      "id": 33
-    },
-    {
       "title": "City of God",
       "genre": "Drama, Crime",
       "rating": "5",
@@ -210,5 +204,6 @@
       "rating": "2",
       "id": 36
     }
+
   ]
 }
