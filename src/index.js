@@ -1,6 +1,7 @@
 "use strict";
 
-const $ = require ("jQuery");
+// const $ = require ("jQuery");
+import $ from "jquery";
 
 import {
     getMoviesJson,
